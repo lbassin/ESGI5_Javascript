@@ -1,19 +1,20 @@
-function Component() {
-    this.props = {};
-    this.maraviable = null;
+class ComponentClass {
+    props = {};
+    maraviable = null;
 
 
-    this.display = function (newProps) {
+    display(newProps) {
         this.shouldUpdate(newProps);
     };
 
-    this.shouldUpdate = function (newProps) {
+    shouldUpdate(newProps) {
         //TODO compare newProps with this.props
         //TODO if true, call this.render()
     };
 
 
-    this.render = function () {
+    render() {
         //TODO call sub-components display method
     };
+
 }
