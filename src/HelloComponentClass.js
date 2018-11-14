@@ -1,6 +1,8 @@
-class HelloComponentClass extends ComponentClass {
+import { ComponentClass } from "./ComponentClass.js";
+
+export class HelloComponentClass extends ComponentClass {
     render() {
-        //TODO call sub-components display method
+        super.render();
     };
 
 }
