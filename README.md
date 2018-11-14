@@ -11,7 +11,7 @@
 		- Validation des propriétés passées au composant
 		- Algorithme => se rapproche de l'algo de l'exercice *HereWeGo!*
 			- Chaque composant hérite d'un object `Component` ayant une méthode `display(newProps)`
-			- display appelle la méthode `shouldUpdate()` du composant courant => compare `newProps` avec les `oldProps`
+			- `display` appelle la méthode `shouldUpdate()` du composant courant => compare `newProps` avec les `props`
 			- si shouldUpdate
 				- appelle la fonction `render` du composant
 				- si `render` invoque d'autres composants, le composant courant appelle la fonction `display(compProps)` des sous-composants
