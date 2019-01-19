@@ -27,13 +27,6 @@ export class ComponentClass {
         <div style="background-color: red;width: 200px;height: 200px;">bonjour {{ name }}</div>
         `;
 
-        const data = {
-            name: 'Toto',
-            test: 'Hello'
-        };
-
-        let text = "bonjour {{ name }} et encore {{ test }} et encore {{ test }} et encore {{ daily }}";
-        text = text.interpolate(data);
 
         //TODO call sub-components display method
     };
@@ -50,7 +43,7 @@ Object.prototype.interpolate = function (data) {
         if (clean in data) {
             string = string.replace(match, data[clean]);
         } else {
-            throw new Error("Parameter " + clean + " does not exists");
+            throw new Error(`Parameter ${clean} does not exists`);
         }
     }
 
