@@ -1,6 +1,6 @@
 import TypeChecker from "./Utils/type_check.js";
 
-export function ComponentClass() {
+export default function TemplateComponent() {
     this.props = {};
 
     this.display = function (newProps) {
@@ -17,7 +17,7 @@ export function ComponentClass() {
 
     const shouldUpdate = (newProps) => {
         if (newProps !== this.props) {
-            this.props = newProps;
+            this.props = Object.assign({}, newProps);
 
             return true;
         }
@@ -27,5 +27,5 @@ export function ComponentClass() {
 
     const typeChecker = new TypeChecker();
 
-    const render = () => '';
+    this.render = () => '';
 }

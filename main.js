@@ -1,7 +1,5 @@
 import './core/index.js';
-import { RootComponentClass } from "./src/RootComponentClass.js";
+import RootComponent from "./src/RootComponent.js";
 
-const rootComponent = new RootComponentClass();
-let content = rootComponent.display({'name': 'World'});
-
-document.getElementById('root').innerHTML = content;
+const rootComponent = new RootComponent();
+document.getElementById('root').innerHTML = rootComponent.display();
