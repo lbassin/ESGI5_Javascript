@@ -26,18 +26,18 @@ Mise en place des différents bases vues en cours.
 Norme Javascript: ES6/ES2015
 
 Notions présentes:
-- Prototypes d'objet natif (String, Object, Number, ...)
-	- Object.prop_access
-	- String.interpolate(animal)
+- [X] Prototypes d'objet natif (String, Object, Number, ...)
+	- [X] Object.prop_access
+	- [X] String.interpolate(animal)
 		- remplace toutes les chaines entourées de "{{ }}" par la valeur de l'objet
 		-  `machaine = "Type d'animal: {{ type.name }}"`
 		- `animal = {type: {name: "chien"}}`
 		- `machaine.interpolate(animal)  => "Type d'animal: chien"`
-- Création d'objet et objet hérité dont certains avec attributs/méthodes privés
-- Création de modules
-- Gestion de l'historique (système de routage)
-- Utilisation des Promises
-- Utilisation du type_checker
+- [ ] Création d'objet et objet hérité dont certains avec attributs/méthodes privés
+- [ ] Création de modules
+- [ ] Gestion de l'historique (système de routage)
+- [ ] Utilisation des Promises
+- [X] Utilisation du type_checker
 	- version minimum: 2
 	- exemples cas d'utilisation: Vérifier les données en entrée de constructeur 
 
