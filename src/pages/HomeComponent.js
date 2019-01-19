@@ -1,9 +1,9 @@
-import TemplateComponent from "../core/TemplateComponent.js";
+import TemplateComponent from "../../core/TemplateComponent.js";
 
 export function HomeComponent() {
     TemplateComponent.apply(this);
 
     this.render = () => {
-        return 'Home';
+        return 'Home2';
     };
 }

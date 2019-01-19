@@ -1,6 +1,6 @@
 import TemplateComponent from "../core/TemplateComponent.js";
 import RouterComponent from "../core/RouterComponent.js";
-import NavbarComponent from "./NavbarComponent.js";
+import NavbarComponent from "./components/NavbarComponent.js";
 import { routes } from "../config.js";
 
 export default function RootComponent() {

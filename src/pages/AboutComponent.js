@@ -1,4 +1,4 @@
-import TemplateComponent from "../core/TemplateComponent.js";
+import TemplateComponent from "../../core/TemplateComponent.js";
 
 export function AboutComponent() {
     TemplateComponent.apply(this);

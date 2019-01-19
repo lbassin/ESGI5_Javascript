@@ -1,5 +1,5 @@
-import { HomeComponent } from "./src/HomeComponent.js";
-import { AboutComponent } from "./src/AboutComponent.js";
+import { HomeComponent } from "./src/pages/HomeComponent.js";
+import { AboutComponent } from "./src/pages/AboutComponent.js";
 
 export const routes = [
     {

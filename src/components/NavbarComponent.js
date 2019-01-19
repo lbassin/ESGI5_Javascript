@@ -1,5 +1,5 @@
-import TemplateComponent from "../core/TemplateComponent.js";
-import { RouterUtils } from "../core/Utils/router.js";
+import TemplateComponent from "../../core/TemplateComponent.js";
+import { RouterUtils } from "../../core/Utils/router.js";
 
 export default function NavbarComponent() {
     TemplateComponent.apply(this);
