@@ -8,7 +8,12 @@ export default function TemplateComponent() {
             let output = this.render();
 
             if (!typeChecker.check(output, {type: 'string'})) {
-                throw new TypeError(`Output of ${this.constructor.name} must be a string, ${output.constructor.name} given.`);
+                let given = undefined;
+                if(output){
+                    given = output.constructor.name;
+                }
+
+                throw new TypeError(`Output of ${this.constructor.name} must be a string, ${given} given.`);
             }
 
             return output.interpolate(this.props);
