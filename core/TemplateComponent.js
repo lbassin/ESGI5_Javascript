@@ -3,9 +3,9 @@ import TypeChecker from "./Utils/type_check.js";
 export default function TemplateComponent() {
     this.props = {};
 
-    this.display = function (newProps) {
+    this.display = async function (newProps) {
         if (shouldUpdate(newProps)) {
-            let output = this.render();
+            let output = await this.render();
 
             if (!typeChecker.check(output, {type: 'string'})) {
                 let given = undefined;

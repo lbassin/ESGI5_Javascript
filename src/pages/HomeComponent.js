@@ -1,6 +1,6 @@
 import TemplateComponent from "../../core/TemplateComponent.js";
 
-export function HomeComponent() {
+export default function HomeComponent() {
     TemplateComponent.apply(this);
 
     this.render = () => {

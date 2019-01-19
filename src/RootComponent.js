@@ -9,9 +9,9 @@ export default function RootComponent() {
     const navbarComponent = new NavbarComponent();
     const routerComponent = new RouterComponent(routes);
 
-    this.render = () => {
-        const navbar = navbarComponent.display();
-        const router = routerComponent.display();
+    this.render = async () => {
+        const navbar = await navbarComponent.display();
+        const router = await routerComponent.display();
 
         return `
             <div> 

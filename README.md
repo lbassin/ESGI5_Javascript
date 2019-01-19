@@ -36,7 +36,7 @@ Notions présentes:
 - [X] Création d'objet et objet hérité dont certains avec attributs/méthodes privés
 - [X] Création de modules
 - [X] Gestion de l'historique (système de routage)
-- [ ] Utilisation des Promises
+- [X] Utilisation des Promises
 - [X] Utilisation du type_checker
 	- version minimum: 2
 	- exemples cas d'utilisation: Vérifier les données en entrée de constructeur 

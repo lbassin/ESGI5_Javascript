@@ -1,7 +1,13 @@
 import TemplateComponent from "./TemplateComponent.js";
+import TypeChecker from "./Utils/type_check.js";
 
 export default function RouterComponent(routes) {
     TemplateComponent.apply(this);
+
+    const typeChecker = new TypeChecker();
+    if(!typeChecker.check(routes, {type: 'array'})){
+        throw new TypeError('The router component needs an array');
+    }
 
     this.url = document.URL.trim();
     this.routes = routes;
