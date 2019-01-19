@@ -33,7 +33,7 @@ Notions présentes:
 		-  `machaine = "Type d'animal: {{ type.name }}"`
 		- `animal = {type: {name: "chien"}}`
 		- `machaine.interpolate(animal)  => "Type d'animal: chien"`
-- [ ] Création d'objet et objet hérité dont certains avec attributs/méthodes privés
+- [X] Création d'objet et objet hérité dont certains avec attributs/méthodes privés
 - [ ] Création de modules
 - [ ] Gestion de l'historique (système de routage)
 - [ ] Utilisation des Promises

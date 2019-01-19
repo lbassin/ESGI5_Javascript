@@ -1,3 +1,5 @@
+import TypeChecker from "./Utils/type_check.js";
+
 export function ComponentClass() {
     this.props = {};
 
@@ -5,7 +7,7 @@ export function ComponentClass() {
         if (shouldUpdate(newProps)) {
             let output = this.render();
 
-            if (!Object.type_checker(output, {type: 'string'})) {
+            if (!typeChecker.check(output, {type: 'string'})) {
                 throw new TypeError(`Output of ${this.constructor.name} must be a string, ${output.constructor.name} given.`);
             }
 
@@ -22,6 +24,8 @@ export function ComponentClass() {
 
         return false;
     };
+
+    const typeChecker = new TypeChecker();
 
     const render = () => '';
 }
