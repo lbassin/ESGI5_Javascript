@@ -1,6 +1,6 @@
 Object.prototype.interpolate = function (data) {
     let string = this;
-    let myRegexp = /{{\s*(?<name>[^\s]+)\s*}}/gm;
+    let myRegexp = /{{\s*([^\s]+)\s*}}/gm;
     let matches = this.match(myRegexp);
 
     if (!matches) {
