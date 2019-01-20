@@ -5,12 +5,13 @@ export default function RouterComponent(routes) {
     TemplateComponent.apply(this);
 
     const typeChecker = new TypeChecker();
-    if(!typeChecker.check(routes, {type: 'array'})){
+    if (!typeChecker.check(routes, {type: 'array'})) {
         throw new TypeError('The router component needs an array');
     }
 
     this.url = document.URL.trim();
     this.routes = routes;
+    this.params = [];
 
     const initPath = () => {
         const pattern = new RegExp('^https?:\\/\\/[^\\/]+\\/(.+)?', 'i');
@@ -32,7 +33,27 @@ export default function RouterComponent(routes) {
     this.path = initPath();
 
     const initComponent = () => {
-        const route = this.routes.find((route) => route.path === this.path);
+        const typeChecker = new TypeChecker();
+
+        const route = this.routes.find((route) => {
+            if (typeChecker.check(route.path, {type: 'string'})) {
+                return route.path === this.path
+            }
+
+            if (typeChecker.check(route.path, {type: 'RegExp'})) {
+                const data = this.url.match(route.path);
+                if (!data) {
+                    return false;
+                }
+
+                data.shift();
+                this.params = data.slice(0, data.length);
+
+                return true;
+            }
+
+            return undefined;
+        });
 
         return route ? route.component : false;
     };
@@ -41,7 +62,7 @@ export default function RouterComponent(routes) {
     if (this.componentName === false || this.componentName === undefined) {
         console.error('Throw 404');
     }
-    this.component = new this.componentName();
+    this.component = new this.componentName(...this.params);
 
     this.render = () => {
         return this.component.display();

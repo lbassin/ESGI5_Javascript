@@ -12,6 +12,10 @@ function execScripts(content) {
     const regex = new RegExp('<script(.+?)<\\/script>', 'gis');
     const data = content.match(regex);
 
+    if (!data) {
+        return;
+    }
+
     for (let i = 0; i < data.length; i++) {
         const startOfScript = data[i].indexOf('>') + 1;
         const scriptLength = data[i].lastIndexOf('<') - startOfScript;
