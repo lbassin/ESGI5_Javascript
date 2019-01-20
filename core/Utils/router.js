@@ -4,6 +4,10 @@ export const RouterUtils = function () {
     this.getPathByName = (name) => {
         const route = routes.find((route) => route.name === name);
 
-        return route ? route.path : false;
+        if (!route) {
+            throw new Error(`Route ${name} doesn't exist`);
+        }
+
+        return route.path;
     };
 };

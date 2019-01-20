@@ -1,5 +1,6 @@
 import HomeComponent from "./src/pages/HomeComponent.js";
 import AboutComponent from "./src/pages/AboutComponent.js";
+import CameraComponent from "./src/pages/CameraComponent.js";
 
 export const routes = [
     {
@@ -11,5 +12,10 @@ export const routes = [
         path: 'about',
         name: 'about',
         component: AboutComponent
+    },
+    {
+        path: 'camera',
+        name: 'camera',
+        component: CameraComponent
     }
 ];

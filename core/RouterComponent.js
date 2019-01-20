@@ -38,7 +38,7 @@ export default function RouterComponent(routes) {
     };
     this.componentName = initComponent();
 
-    if (this.componentName === false) {
+    if (this.componentName === false || this.componentName === undefined) {
         console.error('Throw 404');
     }
     this.component = new this.componentName();
