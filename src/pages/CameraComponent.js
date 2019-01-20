@@ -13,7 +13,7 @@ export default function CameraComponent() {
     
                 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                     navigator.mediaDevices.getUserMedia({ video: true })
-                        .then((sktream) => {
+                        .then((stream) => {
                             video.srcObject = stream;
                             video.play();
                         });
