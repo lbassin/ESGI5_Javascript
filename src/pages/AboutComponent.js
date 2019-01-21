@@ -35,7 +35,7 @@ export default function AboutComponent() {
         };
 
         return `
-            <div style="width: 40%;margin: auto;padding-top: 24px;">
+            <div class="container">
                 ${await card.display(data)}
             </div>
         `;

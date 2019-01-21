@@ -11,7 +11,7 @@ export default function DayComponent(day) {
         }
 
         return `
-            <div id="week" style="text-align: center;">
+            <div id="week" class="container text-center">
                 <p>
                     The day number ${this.dayNumber} was a <span id="day"></span>
                 </p>

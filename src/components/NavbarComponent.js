@@ -10,17 +10,28 @@ export default function NavbarComponent() {
         const homeRoute = this.router.getPathByName('home');
         const aboutRoute = this.router.getPathByName('about');
         const cameraRoute = this.router.getPathByName('camera');
+        const dayRoute = '/day/12'; // TODO
 
         return `
-            <div style="display: flex;justify-content: space-between;background: red;line-height: 64px;padding: 0 32px;margin-bottom: 12px">
-                <div>Javascript</div>
-                <div>
-                    <ul>
-                        <li style="display: inline-block"><a href="${homeRoute}">Home</a></li>
-                        <li style="display: inline-block"><a href="${aboutRoute}">Who am I ?</a></li>
-                        <li style="display: inline-block"><a href="${cameraRoute}">Who are you?</a></li>
-                        <li style="display: inline-block"><a href="/day/12">Which day was it ?</a></li> <!-- TODO -->
-                    </ul>
+            <div class="navbar" style="line-height: 64px;margin-bottom: 12px;background: #ecedee;">
+                <div class="container" style="display: flex;justify-content: space-between;">
+                    <div>Javascript</div>
+                    <div>
+                        <ul>
+                            <li style="display: inline-block;padding: 0 15px;">
+                                <a href="${homeRoute}" style="color: #777;text-decoration: none;">Home</a>
+                            </li>
+                            <li style="display: inline-block;padding: 0 15px;">
+                                <a href="${aboutRoute}" style="color: #777;text-decoration: none;">Who am I ?</a>
+                            </li>
+                            <li style="display: inline-block;padding: 0 15px;">
+                                <a href="${cameraRoute}" style="color: #777;text-decoration: none;">Who are you?</a>
+                            </li>
+                            <li style="display: inline-block;padding: 0 15px;">
+                                <a href="${dayRoute}" style="color: #777;text-decoration: none;">Which day was it ?</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>  
         `;

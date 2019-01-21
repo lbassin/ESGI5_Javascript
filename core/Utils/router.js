@@ -8,6 +8,10 @@ export const RouterUtils = function () {
             throw new Error(`Route ${name} doesn't exist`);
         }
 
+        if (route.path === '/') {
+            return route.path;
+        }
+
         return '/' + route.path;
     };
 };
