@@ -10,7 +10,7 @@ export default function NavbarComponent() {
         const homeRoute = this.router.getPathByName('home');
         const aboutRoute = this.router.getPathByName('about');
         const cameraRoute = this.router.getPathByName('camera');
-        const dayRoute = '/day/12'; // TODO
+        const dayRoute = this.router.getPathByName('day', 12);
 
         return `
             <div class="navbar" style="line-height: 64px;margin-bottom: 12px;background: #ecedee;">
