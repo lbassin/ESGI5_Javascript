@@ -3,6 +3,7 @@ import AboutComponent from "./src/pages/AboutComponent.js";
 import CameraComponent from "./src/pages/CameraComponent.js";
 import DayComponent from "./src/pages/DayComponent.js";
 import FileReaderComponent from "./src/pages/FileReaderComponent.js";
+import NotFoundComponent from "./core/NotFoundComponent.js";
 
 export const routes = [
     {
@@ -31,3 +32,5 @@ export const routes = [
         component: FileReaderComponent
     },
 ];
+
+export const notFoundComponet = NotFoundComponent;
