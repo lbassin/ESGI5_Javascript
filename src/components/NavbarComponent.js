@@ -12,6 +12,7 @@ export default function NavbarComponent() {
         const cameraRoute = this.router.getPathByName('camera');
         const dayRoute = this.router.getPathByName('day', 12);
         const fileReader = this.router.getPathByName('filereader');
+        const sw = this.router.getPathByName('serviceWorker');
 
         return `
             <div class="navbar" style="line-height: 64px;margin-bottom: 12px;background: #ecedee;">
@@ -33,6 +34,9 @@ export default function NavbarComponent() {
                             </li>
                             <li style="display: inline-block;padding: 0 15px;">
                                 <a href="${fileReader}" style="color: #777;text-decoration: none;">File reader</a>
+                            </li>
+                            <li style="display: inline-block;padding: 0 15px;">
+                                <a href="${sw}" style="color: #777;text-decoration: none;">Service Worker</a>
                             </li>
                         </ul>
                     </div>
