@@ -1,5 +1,6 @@
 import TemplateComponent from "./TemplateComponent.js";
 import TypeChecker from "./Utils/type_check.js";
+import { notFoundComponet } from "../config.js";
 
 export default function RouterComponent(routes) {
     TemplateComponent.apply(this);
@@ -60,7 +61,7 @@ export default function RouterComponent(routes) {
     this.componentName = initComponent();
 
     if (this.componentName === false || this.componentName === undefined) {
-        console.error('Throw 404');
+        this.componentName = notFoundComponet;
     }
     this.component = new this.componentName(...this.params);
 
