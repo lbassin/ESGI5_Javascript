@@ -2,6 +2,7 @@ import HomeComponent from "./src/pages/HomeComponent.js";
 import AboutComponent from "./src/pages/AboutComponent.js";
 import CameraComponent from "./src/pages/CameraComponent.js";
 import DayComponent from "./src/pages/DayComponent.js";
+import FileReaderComponent from "./src/pages/FileReaderComponent.js";
 
 export const routes = [
     {
@@ -23,5 +24,10 @@ export const routes = [
         path: /day\/(\d+)/i,
         name: 'day',
         component: DayComponent
+    },
+    {
+        path: 'filereader',
+        name: 'filereader',
+        component: FileReaderComponent
     },
 ];
