@@ -2,28 +2,30 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('v1').then(function(cache) {
             return cache.addAll([
-                '/src/images/',
-                '/src/images/cat.jpg',
-                '/src/images/roller_dog.jpg',
                 '/index.html',
                 '/config.js',
                 '/main.js',
                 '/style.css',
-                '/src/pages/',
-                '/src/pages/SwComponent.css',
-                '/src/components/',
+                '/sw.js',
+                '/core/index.js',
+                '/core/NotFoundComponent.js',
+                '/core/RouterComponent.js',
+                '/core/TemplateComponent.js',
+                '/core/Utils/http.js',
+                '/core/Utils/interpolate.js',
+                '/core/Utils/prop_access.js',
+                '/core/Utils/router.js',
+                '/core/Utils/type_check.js',
                 '/src/components/NavbarComponent.js',
-                '/src/core/',
-                '/src/core/index.js',
-                '/src/core/NotFoundComponent.js',
-                '/src/core/RouterComponent.js',
-                '/src/core/TemplateComponent.js',
-                '/src/core/Utils/',
-                '/src/core/Utils/http.js',
-                '/src/core/Utils/interpolate.js',
-                '/src/core/Utils/prop_access.js',
-                '/src/core/Utils/router.js',
-                '/src/core/Utils/type_check.js'
+                '/src/components/CardComponent.js',
+                '/src/images/cat.jpg',
+                '/src/images/roller_dog.jpg',
+                '/src/pages/AboutComponent.js',
+                '/src/pages/CameraComponent.js',
+                '/src/pages/DayComponent.js',
+                '/src/pages/FileReaderComponent.js',
+                '/src/pages/HomeComponent.js',
+                '/src/pages/SwComponent.js'
             ]);
         })
     );
@@ -31,6 +33,7 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(caches.match(event.request).then(function(response) {
+
         if (response !== undefined) {
             return response;
         } else {
